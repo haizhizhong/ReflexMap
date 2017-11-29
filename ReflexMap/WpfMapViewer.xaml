@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="ReflexMap.WpfMapViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013">
+    <Grid>
+        <esri:MapView x:Name="mapView" Margin="0,0,0,0">
+            <esri:Map>
+            </esri:Map>
+        </esri:MapView>
+
+        <Border Background="White" BorderBrush="Black" BorderThickness="1"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="5" Padding="5" Width="200">
+            <StackPanel>
+                <TextBlock Text="Select basemap" Margin="0,0,0,2" FontWeight="Bold"/>
+                <ComboBox Name="basemapChooser" SelectionChanged="OnBasemapChooserSelectionChanged"/>
+            </StackPanel>
+        </Border>
+        <Border x:Name="eventMarker" Background="White" BorderBrush="Black" BorderThickness="1"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Margin="5,65,0,0" Padding="5" Width="200" RenderTransformOrigin="0.465,1.678">
+            <StackPanel>
+                <TextBlock Text="Event Marker" Margin="0,0,0,5" FontWeight="Bold"/>
+                <RadioButton x:Name="chkProportional" IsChecked="True" Checked="EventMarkerChecked">Proportional</RadioButton>
+                <RadioButton x:Name="chkMarker" Checked="EventMarkerChecked" Content="Marker"/>
+            </StackPanel>
+        </Border>
+        <Border Background="White" BorderBrush="Black" BorderThickness="1"
+				HorizontalAlignment="Left" VerticalAlignment="Top" 
+				Margin="5,135,0,0" Padding="5" Width="200" >
+            <StackPanel>
+                <TextBlock Text="Layers" Margin="0,0,0,5" FontWeight="Bold"/>
+                <ListView x:Name="layerList" Margin="0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Grid.Column="0" Width="100" Text="{Binding LayerName}" />
+                                <CheckBox  Grid.Column="1" IsChecked="{Binding Visible}">
+                                    Visible
+                                </CheckBox>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </Border>
+
+        <Border x:Name="attrInfo" Background="White" BorderBrush="Black" BorderThickness="1"
+				HorizontalAlignment="Right" VerticalAlignment="Bottom" 
+				Margin="15" Padding="0">
+            <StackPanel>
+                <ListView x:Name="attrList" Margin="0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Grid.Column="0" Width="75" Text="{Binding Key}" />
+                                <TextBlock Grid.Column="1" Width="175" Text="{Binding Value}" FontWeight="Bold" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

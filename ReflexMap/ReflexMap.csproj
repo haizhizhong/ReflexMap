@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{921CFB5B-B365-4F48-A39B-D15ECB73E44D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ReflexMap</RootNamespace>
+    <AssemblyName>ReflexMap</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\DotNetCompileDirectory%28no running%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CL_Dialog, Version=1.0.6386.25787, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\CL_Dialog.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Projects\DotNet\DotNetCompileDirectory(no running)\DevExpress.Data.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\DevExpress.Utils.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\DevExpress.XtraBars.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\DevExpress.XtraEditors.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Projects\DotNet\DotNetCompileDirectory(no running)\DevExpress.XtraGrid.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\DevExpress.XtraLayout.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v16.2, Version=16.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\DevExpress.XtraWizard.v16.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Esri.ArcGISRuntime, Version=10.2.7.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Applications\Fixed Assets\BuildingAssets\BuildingMap\packages\Esri.ArcGISRuntime.WPF.100.0.0\lib\net452\Esri.ArcGISRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="GeoJSON, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\DotNet\DotNetCompileDirectory(no running)\GeoJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="HMConnection, Version=1.0.6374.26526, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Projects\DotNet\DotNetCompileDirectory(no running)\HMConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\PresentationCore.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\PresentationFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="ReflexEditors, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\ReflexEditors.dll</HintPath>
+    </Reference>
+    <Reference Include="ReflexGridControl, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\ReflexGridControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ReflexImgSrc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\ReflexImgSrc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\System.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TUC_HMDevXManager">
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\BackupDLLS\TUC_HMDevXManager.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\WindowsBase.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\WindowsFormsIntegration.dll</HintPath>
+    </Reference>
+    <Reference Include="WS_Popups, Version=1.0.6381.22663, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DotNetCompileDirectory(no running)\WS_Popups.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PosGenerator.cs" />
+    <Compile Include="Draw\DrawTabFactory.cs" />
+    <Compile Include="Draw\PenBase.cs" />
+    <Compile Include="Draw\ucDrawBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Draw\PenLine.cs" />
+    <Compile Include="Draw\PenShape.cs" />
+    <Compile Include="Draw\PenPoint.cs" />
+    <Compile Include="Draw\PenEvent.cs" />
+    <Compile Include="Draw\ucDrawLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Draw\ucDrawLine.Designer.cs">
+      <DependentUpon>ucDrawLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\ucDrawEvents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Draw\ucDrawEvents.Designer.cs">
+      <DependentUpon>ucDrawEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\ucDrawShape.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Draw\ucDrawShape.Designer.cs">
+      <DependentUpon>ucDrawShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\WpfMapDrawBase.cs" />
+    <Compile Include="EventInfo.cs" />
+    <Compile Include="frmMapImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMapImport.Designer.cs">
+      <DependentUpon>frmMapImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeoInfo.cs" />
+    <Compile Include="MapData.cs" />
+    <Compile Include="MapLayerInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflexConst.cs" />
+    <Compile Include="ucMapImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMapImport.Designer.cs">
+      <DependentUpon>ucMapImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMap.Designer.cs">
+      <DependentUpon>ucMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMapViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMapViewer.Designer.cs">
+      <DependentUpon>ucMapViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\ucDrawPoint.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Draw\ucDrawPoint.Designer.cs">
+      <DependentUpon>ucDrawPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WpfMapBase.xaml.cs">
+      <DependentUpon>WpfMapBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfMapViewer.xaml.cs">
+      <DependentUpon>WpfMapViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Draw\frmMapDraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Draw\frmMapDraw.Designer.cs">
+      <DependentUpon>frmMapDraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPosGenResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPosGenResult.Designer.cs">
+      <DependentUpon>frmPosGenResult.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Draw\frmMapDraw.resx">
+      <DependentUpon>frmMapDraw.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Draw\ucDrawLine.resx">
+      <DependentUpon>ucDrawLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Draw\ucDrawEvents.resx">
+      <DependentUpon>ucDrawEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Draw\ucDrawShape.resx">
+      <DependentUpon>ucDrawShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMapImport.resx">
+      <DependentUpon>frmMapImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ucMapImport.resx">
+      <DependentUpon>ucMapImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMap.resx">
+      <DependentUpon>ucMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Draw\ucDrawPoint.resx">
+      <DependentUpon>ucDrawPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMapViewer.resx">
+      <DependentUpon>ucMapViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPosGenResult.resx">
+      <DependentUpon>frmPosGenResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="WpfMapBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfMapViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
