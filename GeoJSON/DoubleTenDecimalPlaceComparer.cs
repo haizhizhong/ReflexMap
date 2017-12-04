@@ -23,4 +23,9 @@ namespace GeoJSON.Net
             return obj.GetHashCode();
         }
     }
+
+    //Haizhi's big task upsdate 1
+
+    //Haizhi's big task upsdate 2
+
 }
