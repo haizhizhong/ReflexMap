@@ -22,7 +22,5 @@ namespace GeoJSON.Net
         {
             return obj.GetHashCode();
         }
-
-        // bad fix for bug 1001
     }
 }
