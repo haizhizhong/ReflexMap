@@ -19,7 +19,7 @@ namespace TestMap
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            // quick fix bad
+            // quick fix good
         }
     }
 }
